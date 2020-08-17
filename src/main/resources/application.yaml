@@ -1,0 +1,21 @@
+spring:
+  kafka:
+    bootstrap-servers: tamajit.servicebus.windows.net:9093
+    client-id: first-producer
+    properties:
+      sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username="$ConnectionString" password="Endpoint=sb://tamajit.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=+dCe5ihkHBtfpunCa/qcfdL+STn5MFXGbBqWsj9kL3A=";
+      sasl.mechanism: PLAIN
+      security.protocol: SASL_SSL
+    producer:
+      value-serializer: com.ProducerMessageSerializer
+    consumer:
+      group-id: $Default
+      properties:
+        spring.json:
+          use.type.headers: false
+          value.default.type: com.SimpleMessage
+topic:
+  name: my-topic
+server:
+  port: 8081  
+ 
