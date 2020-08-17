@@ -3,7 +3,7 @@ spring:
     bootstrap-servers: tamajit.servicebus.windows.net:9093
     client-id: first-producer
     properties:
-      sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username="$ConnectionString" password="Endpoint=sb://tamajit.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=+dCe5ihkHBtfpunCa/qcfdL+STn5MFXGbBqWsj9kL3A=";
+      sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username="$ConnectionString" password="Endpoint=sb://tamajit.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=+";
       sasl.mechanism: PLAIN
       security.protocol: SASL_SSL
     producer:
